@@ -338,6 +338,12 @@ service vendor.nv_mac /vendor/bin/nv_mac
     group system inet net_admin wifi net_raw
     oneshot
 
+service power_off_alarm /vendor/bin/power_off_alarm
+    class core
+    group system
+    disabled
+    oneshot
+
 service dcvs-sh /vendor/bin/init.qti.dcvs.sh
     class late_start
     user root
