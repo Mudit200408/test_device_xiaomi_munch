@@ -391,6 +391,10 @@ PRODUCT_PACKAGES += \
     libstagefright_softomx.vendor
 
 # Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+    
+# Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayMunch \
     FrameworkResOverlayAOSP \
