@@ -10,6 +10,10 @@ log.tag.CHIUSECASE=ERROR
 # Disable vsync for cpu rendered apps
 debug.cpurend.vsync=false
 
+# Dexopt
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.systemuicompilerfilter=speed
+
 # Display
 debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
