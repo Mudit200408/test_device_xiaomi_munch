@@ -1,0 +1,4 @@
+# Xiaomi Vibrator Feature Service
+attribute hal_vibratorfeature_xiaomi;
+attribute hal_vibratorfeature_xiaomi_client;
+attribute hal_vibratorfeature_xiaomi_server;

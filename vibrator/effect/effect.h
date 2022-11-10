@@ -27,24 +27,17 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#define LOG_TAG "vendor.qti.hardware.vibrator.service.xiaomi_kona"
+#ifndef XIAOMI_VIBRATOR_EFFECT_STREAM_H
+#define XIAOMI_VIBRATOR_EFFECT_STREAM_H
+#include <sys/types.h>
 
-#include <android-base/logging.h>
-#include <android/binder_manager.h>
-#include <android/binder_process.h>
+struct effect_stream {
+    uint32_t   	    effect_id;
+    uint32_t        length;
+    uint32_t        play_rate_hz;
+    const int16_t   *data;
+};
 
-#include "Vibrator.h"
+const struct effect_stream *get_effect_stream(uint32_t effect_id);
 
-using aidl::android::hardware::vibrator::Vibrator;
-
-int main() {
-    ABinderProcess_setThreadPoolMaxThreadCount(0);
-    std::shared_ptr<Vibrator> vib = ndk::SharedRefBase::make<Vibrator>();
-
-    const std::string instance = std::string() + Vibrator::descriptor + "/default";
-    binder_status_t status = AServiceManager_addService(vib->asBinder().get(), instance.c_str());
-    CHECK(status == STATUS_OK);
-
-    ABinderProcess_joinThreadPool();
-    return EXIT_FAILURE;  // should not reach
-}
+#endif
