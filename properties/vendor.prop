@@ -214,6 +214,9 @@ dalvik.vm.image-dex2oat-threads=8
 pm.dexopt.first-boot=quicken
 pm.dexopt.bg-dexopt=everything
 
+# Cached app compaction
+persist.device_config.activity_manager.use_compaction=true
+
 # Display
 persist.sys.sf.color_mode=9
 persist.sys.sf.color_saturation=1.0
