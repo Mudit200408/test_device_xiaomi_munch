@@ -133,6 +133,7 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
+vendor.hw.fm.init=0
 persist.bluetooth.sbc_hd_higher_bitrate=1
 persist.vendor.btstack.enable.lpa=true
 
