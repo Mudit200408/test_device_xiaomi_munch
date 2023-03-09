@@ -83,7 +83,11 @@ vendor/lib/libresampler.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
 vendor/lib/vndk/libxlog.so
 
-# Audio FX OzoAudio
+# Spatial Audio
+vendor/lib/soundfx/libspatialaudio.so
+vendor/lib64/soundfx/libspatialaudio.so
+
+# Audio FX - OzoAudio
 system_ext/lib/libav_ozodecoder.so:vendor/lib/libav_ozodecoder.so
 system_ext/lib/libav_ozoencoder.so:vendor/lib/libav_ozoencoder.so
 system_ext/lib/libozoaudio.so:vendor/lib/libozoaudio.so
