@@ -75,6 +75,10 @@ vendor/lib/libaudcal.so
 vendor/lib/libqtigef.so
 vendor/lib/libssrec.so
 
+# Spatial Audio
+vendor/lib/soundfx/libspatialaudio.so|1903f9c98b38728970ddd12094fa15d96e9d2a5b
+vendor/lib64/soundfx/libspatialaudio.so|0242ecf82a322d6654d859123d4dd221c3c2bf12
+
 # Audio FX modules
 vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/soundfx/libqcbassboost.so
