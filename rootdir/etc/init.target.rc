@@ -137,7 +137,9 @@ on property:ro.boot.dp=0x0
     write /sys/bus/platform/devices/c440000.qcom,spmi:qcom,pm8150@0:qcom,power-on@800/pshold_reboot 7
 
 on boot
-	    chown system system /sys/class/touch/touch_dev/palm_sensor
+	chown system system /sys/class/touch/touch_dev/palm_sensor
+    chmod 0664 /sys/class/touch/touch_dev/palm_sensor
+    
     chown system system /sys/class/touch/touch_dev/partial_diff_data
 
     # Set xiaomi touch permissions
