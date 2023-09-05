@@ -70,6 +70,9 @@ persist.radio.is_vonr_enabled_1=true
 debug.renderengine.backend=skiaglthreaded
 debug.hwui.renderer=skiagl
 
+#LTE CA
+persist.sys.radio.force_lte_ca=true
+
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
 
