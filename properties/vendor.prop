@@ -184,6 +184,8 @@ persist.vendor.btstack.enable.lpa=true
 persist.vendor.bt.a2dp.aac_whitelist=false
 persist.vendor.bt.a2dp.hal.implementation=true
 persist.vendor.btstack.enable.twsplussho=true
+persist.vendor.btstack.enable.twsplus=true
+
 
 
 
