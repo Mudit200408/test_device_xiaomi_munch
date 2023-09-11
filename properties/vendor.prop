@@ -182,6 +182,8 @@ vendor.qcom.bluetooth.soc=hastings
 persist.bluetooth.sbc_hd_higher_bitrate=1
 persist.vendor.btstack.enable.lpa=true
 persist.vendor.bt.a2dp.aac_whitelist=false
+persist.vendor.bt.a2dp.hal.implementation=true
+
 
 # Camera
 persist.vendor.camera.logInfoMask=false
