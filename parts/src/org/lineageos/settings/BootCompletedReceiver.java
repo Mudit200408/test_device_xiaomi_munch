@@ -43,12 +43,16 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
         ThermalUtils.startService(context);
 
+        Log.i(TAG, "Boot completed");
+        
+        // Dolby Atmos
+        DolbyUtils.getInstance(context);
+        
         RefreshUtils.startService(context);
 
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
         FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
         FileUtils.enableService(context);
 
-        DolbyUtils.getInstance(context).onBootCompleted();
     }
 }
