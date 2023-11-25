@@ -196,7 +196,7 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
-    # Set the console loglevel to < KERN_WARN
+    # Set the console loglevel to < KERN_WARN >
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "4 6 1 7"
 
@@ -481,6 +481,10 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wcd_cpe0/fw_name
     #Reinit lmkd to reconfigure lmkd properties
     setprop lmkd.reinit 1
+
+    # Restrict permissions to socket file 
+    # to hide Magisk
+    chmod 440 /proc/net/unix
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
