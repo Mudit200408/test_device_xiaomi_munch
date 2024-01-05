@@ -285,7 +285,6 @@ debug.sf.treat_170m_as_sRGB=1
 persist.demo.hdmirotationlock=false
 debug.sf.predict_hwc_composition_strategy=0
 debug.force_no_blanking=true
-ro.hwui.render_ahead=2
 debug.sf.predict_hwc_composition_strategy=0
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
