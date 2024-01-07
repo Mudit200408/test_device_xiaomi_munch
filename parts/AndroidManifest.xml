@@ -36,7 +36,7 @@
         android:defaultToDeviceProtectedStorage="true"
         android:directBootAware="true">
 
-        <receiver android:name=".BootCompletedReceiver" android:exported="true">
+        <receiver android:name=".BootCompletedReceiver" android:exported="false">
             <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -89,7 +89,7 @@
         <activity
             android:name=".popupcamera.PopupCameraSettingsActivity"
             android:label="@string/popup_title"
-            android:exported="true"
+            android:exported="false"
             android:enabled="false">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -137,7 +137,7 @@
         <activity
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title"
-            android:exported="true"
+            android:exported="false"
             android:theme="@style/Theme.SubSettingsBase_v31">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
