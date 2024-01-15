@@ -182,6 +182,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# Clone apps exemption
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/preinstalled-packages-platform-xiaomi-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-xiaomi-product.xml
+
 # Consumer IR
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
@@ -224,6 +228,16 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor
+
+# Dolby
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/audio/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
+
+TARGET_EXCLUDES_AUDIOFX := true
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v33.so \
+    prebuilts/vndk/v33/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_foundation-v33.so
 
 # DRM
 PRODUCT_PACKAGES += \

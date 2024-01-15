@@ -55,9 +55,6 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/etc/media_codecs_kona.xml)
-            sed -i "/media_codecs_dolby_audio.xml/d" "${2}"
-            ;;
         vendor/lib64/camera/components/com.mi.node.watermark.so)
             $PATCHELF --add-needed "libpiex_shim.so" "${2}"
             ;;
@@ -68,6 +65,11 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "android.hardware.vibrator-V1-ndk_platform.so" "android.hardware.vibrator-V1-ndk.so" "${2}"
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
+        vendor/lib/libstagefright_soft_ddpdec.so | vendor/lib/libstagefright_soft_ac4dec.so | \
+        vendor/lib/libstagefrightdolby.so | vendor/lib64/libstagefright_soft_ddpdec.so | \
+        vendor/lib64/libdlbdsservice.so | vendor/lib64/libstagefright_soft_ac4dec.so | vendor/lib64/libstagefrightdolby.so)
+            ${PATCHELF} --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+    ;;
     esac
 }
 
