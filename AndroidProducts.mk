@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_munch.mk
+    $(LOCAL_DIR)/pixelstar_munch.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_munch-user \
-    aosp_munch-userdebug \
-    aosp_munch-eng
+    pixelstar_munch-user \
+    pixelstar_munch-userdebug \
+    pixelstar_munch-eng
