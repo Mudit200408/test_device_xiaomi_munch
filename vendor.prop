@@ -305,13 +305,6 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 # Telephony
 telephony.active_modems.max_count=2
 
-# Spatial Audio
-audio.spatializer.effect.util_clamp_min=300
-persist.vendor.audio.spatializer.speaker_enabled=true
-ro.audio.spatializer_enabled=true
-ro.audio.spatializer_transaural_enabled_default=false
-ro.vendor.audio.feature.spatial=7
-
 # USB
 vendor.usb.diag.func.name=diag
 vendor.usb.dpl.inst.name=dpl
