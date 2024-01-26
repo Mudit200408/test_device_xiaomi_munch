@@ -265,15 +265,8 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.qti
-
-ifneq ($(TARGET_IS_VAB),true)
-PRODUCT_PACKAGES += \
-    android.hardware.health-service.qti_recovery
-endif
-
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.1.vendor
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -320,10 +313,6 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
-
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
 
 # Media
 PRODUCT_PACKAGES += \
