@@ -20,8 +20,7 @@ void search_variant(const std::vector<variant_info_t> variants) {
     std::string sku_value = GetProperty(SKU_PROP, "");
 
     for (const auto& variant : variants) {
-        if ((variant.hwc_value == "" || variant.hwc_value == hwc_value) &&
-            (variant.sku_value == "" || variant.sku_value == sku_value)) {
+        if (variant.hwc_value == "" || variant.hwc_value == hwc_value){
             set_variant_props(variant);
             break;
         }
@@ -36,6 +35,4 @@ void set_variant_props(const variant_info_t variant) {
     set_ro_build_prop("mod_device", variant.mod_device, true);
     set_ro_build_prop("model", variant.model, true);
 
-    if (variant.nfc)
-        property_override(SKU_PROP, "nfc");
 }
