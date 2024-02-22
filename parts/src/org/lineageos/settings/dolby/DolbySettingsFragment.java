@@ -30,7 +30,7 @@ import android.widget.Toast;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreference;
 
 import com.android.settingslib.widget.MainSwitchPreference;
@@ -41,7 +41,7 @@ import org.lineageos.settings.R;
 import java.util.Arrays;
 import java.util.List;
 
-public class DolbySettingsFragment extends PreferenceFragment implements
+public class DolbySettingsFragment extends PreferenceFragmentCompat implements
         OnPreferenceChangeListener, OnMainSwitchChangeListener {
 
     private static final String TAG = "DolbySettingsFragment";
